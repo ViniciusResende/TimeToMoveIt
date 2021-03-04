@@ -1,0 +1,92 @@
+.content {
+  background: var(--white);  
+  width: 8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 0;
+}
+
+.logo{
+  margin: 2rem 0;
+}
+
+.iconsContainer {
+  margin: auto 0;
+}
+
+.iconsContainer div svg{
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 1rem 0;
+}
+
+.homeIcon,
+.awardIcon{
+  cursor: pointer;
+  position: relative;
+}
+
+.homeIcon .homeIconBefore,
+.awardIcon .awardIconBefore{
+  background-color: var(--blue);
+  bottom: 0.5rem;
+  content: ' ';
+  display: block;
+  height: 4rem;
+  left: -2.75rem;
+  line-height: 0;
+  position: absolute;
+  right: 4.75rem;
+  border-radius: 0 10px 10px 0;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+
+.homeIcon svg,
+.awardIcon svg{
+  stroke: var(--text);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.homeIcon:hover svg,
+.awardIcon:hover svg{
+  stroke: var(--blue);
+  opacity: 1;
+}
+
+
+@media(max-width: 1175px){
+  .container{
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .content{
+    z-index: 2;
+    transition: all 0.4s ease;
+    transform: translateX(-100%);
+  }
+  
+  .one,
+  .two,
+  .three {
+    background-color: var(--blue);
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+
+    transition-duration: 0.3s;
+  }
+
+  .menuToggle{
+    width: 40px;
+    height: 30px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+}

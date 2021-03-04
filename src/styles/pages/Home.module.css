@@ -1,0 +1,68 @@
+.light {
+  --white: #fff;
+  --background: #E5E5E5;
+  --gray-line: #DCDDE0;
+  --text: #666666;
+  --text-highlight: #B3B9FF;
+  --title: #2E384D;
+  --blue: #5965E0;
+  --blue-dark: #4953B8;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+.dark {
+  --white: rgb(83, 83, 83);
+  --background: #202020;
+  --gray-line: #303030;
+  --text: #c4c4c4;
+  --text-highlight: #B3B9FF;
+  --title: #768fc7;
+  --blue: #5965E0;
+  --blue-dark: #4953B8;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container section {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+@media (max-width: 1000px){
+  
+  .container {
+    height: 100%;  
+  }
+
+  .container section{
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  }
+}
+
+@media (max-width: 454px){
+  .container section{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
